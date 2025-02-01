@@ -25,7 +25,6 @@ def set_field_format(worksheet, start_row, end_row, field_keys, settings):
     text_middle_fields = settings.get("text_middle_fields", [])
 
     border = Border(left=Side(style="thin", color="808080"), right=Side(style="thin", color="808080"), top=Side(style="thin", color="808080"), bottom=Side(style="thin", color="808080"))
-    centered_alignment = Alignment(horizontal="center", vertical="center")
 
     # Process the batch of rows
     for row in worksheet.iter_rows(min_row=start_row, max_row=end_row):
