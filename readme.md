@@ -23,52 +23,7 @@ python3 ./exporter.py ./sample.json ./sample.xlsx
 ```
 
 ## 📂 Sample JSON Structure
-The input JSON file should have the following structure:
-```json
-{
-  "fields": {
-    "id": "ID",
-    "name": "Name",
-    "price": "Price",
-    "quantity": "Quantity"
-  },
-  "data": [
-    {
-      "sheet": "Products",
-      "lists": [
-        {
-          "id": 1,
-          "name": "Product A",
-          "price": 19.99,
-          "quantity": 100
-        },
-        {
-          "id": 2,
-          "name": "Product B",
-          "price": 29.99,
-          "quantity": 150
-        }
-      ]
-    },
-    {
-      "sheet": "Sales",
-      "lists": [
-        {
-          "id": 101,
-          "name": "Sale A",
-          "price": 199.99,
-          "quantity": 5
-        }
-      ]
-    }
-  ],
-  "settings": {
-    "currency_fields": ["price"],
-    "text_center_fields": ["name"],
-    "text_middle_fields": ["quantity"]
-  }
-}
-```
+For the sample json structure checkout `./sample.json` file included in the repository.
 
 ## 🛠 Troubleshooting
 - If you get a `ModuleNotFoundError` error, ensure all dependencies are installed using:
