@@ -1,0 +1,17 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Run exporter.py",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/exporter.py",
+            "args": [
+                "${workspaceFolder}/sample.json",
+                "${workspaceFolder}/output/sample.xlsx"
+            ],
+            "console": "integratedTerminal",
+            "justMyCode": true
+        }
+    ]
+}
