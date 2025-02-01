@@ -1,0 +1,44 @@
+{
+  "fields": {
+    "id": "ID",
+    "name": "Name",
+    "price": "Price",
+    "quantity": "Quantity"
+  },
+  "data": [
+    {
+      "sheet": "Products",
+      "lists": [
+        {
+          "id": 1,
+          "name": "Product A",
+          "price": 19000,
+          "quantity": 100
+        },
+        {
+          "id": 2,
+          "name": "Product B",
+          "price": 24950,
+          "quantity": 150
+        }
+      ]
+    },
+    {
+      "sheet": "Sales",
+      "lists": [
+        {
+          "id": 101,
+          "name": "Sale A",
+          "price": 199500,
+          "quantity": 10
+        }
+      ]
+    }
+  ],
+  "settings": {
+    "currency_fields": ["price"],
+    "currency_symbol": "$",
+    "text_center_fields": ["name", "quantity"],
+    "text_middle_fields": ["quantity"]
+  }
+}
