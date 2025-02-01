@@ -110,7 +110,7 @@ def create_excel(json_data, output_file):
 
 def main():
     if len(sys.argv) != 3:
-        print("Usage: python3 generate-excel.py <json_path> <output_path>")
+        print("Usage: python3 exporter.py <json_path> <output_path>")
         sys.exit(1)
 
     input_file = sys.argv[1]
