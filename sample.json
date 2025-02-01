@@ -1,13 +1,13 @@
 {
-  "fields": {
-    "id": "ID",
-    "name": "Name",
-    "price": "Price",
-    "quantity": "Quantity"
-  },
   "data": [
     {
       "sheet": "Products",
+      "fields": {
+        "id": "ID",
+        "name": "Product Name",
+        "price": "Price",
+        "quantity": "Stock Quantity"
+      },
       "lists": [
         {
           "id": 1,
@@ -25,12 +25,18 @@
     },
     {
       "sheet": "Sales",
+      "fields": {
+        "id": "Sale ID",
+        "name": "Customer",
+        "price": "Total",
+        "date": "Sale Date"
+      },
       "lists": [
         {
           "id": 101,
-          "name": "Sale A",
+          "name": "John Doe",
           "price": 199500,
-          "quantity": 10
+          "date": "2024-02-01"
         }
       ]
     }
@@ -38,7 +44,7 @@
   "settings": {
     "currency_fields": ["price"],
     "currency_symbol": "$",
-    "text_center_fields": ["name", "quantity"],
+    "text_center_fields": ["name", "quantity", "date"],
     "text_middle_fields": ["quantity"]
   }
 }

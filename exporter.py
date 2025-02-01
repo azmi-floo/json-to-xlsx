@@ -54,7 +54,6 @@ def create_excel(json_data, output_file):
     wb = Workbook()
     wb.remove(wb.active)
 
-    field_keys = list(json_data["fields"].keys())
     settings = json_data.get("settings", {})
 
     # Process each sheet
@@ -62,9 +61,10 @@ def create_excel(json_data, output_file):
         print(f"Processing sheet: {sheet_data['sheet']}")
         ws = wb.create_sheet(sheet_data["sheet"])
 
-        # Write and format table header
+        field_keys = list(sheet_data["fields"].keys())
         for col, field_key in enumerate(field_keys, 1):
-            cell = ws.cell(row=1, column=col, value=json_data["fields"][field_key])
+            cell = ws.cell(row=1, column=col, value=sheet_data["fields"][field_key])
+
             cell.font = Font(bold=True)
             cell.alignment = Alignment(horizontal="center", vertical="center")
             cell.border = Border(left=Side(style="thin", color="808080"), right=Side(style="thin", color="808080"), top=Side(style="thin", color="808080"), bottom=Side(style="thin", color="808080"))
