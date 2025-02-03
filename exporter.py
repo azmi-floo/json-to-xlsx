@@ -1,5 +1,6 @@
 import json
 import sys
+import os
 from openpyxl import Workbook
 from openpyxl.styles import Font, Alignment, Border, Side, PatternFill
 from openpyxl.utils import get_column_letter
@@ -105,6 +106,8 @@ def create_excel(json_data, output_file):
 
     print("Saving workbook...")
     wb.save(output_file)
+
+    os.chmod(output_file, 0o775)
     print("Done!")
 
 
